@@ -4,7 +4,7 @@
 version: "3.3"
 services:
   OpenIkarusContainer:
-    image: ikarusproject/ikarus-dev:latest
+    image: ikarusproject/ikarus:latest
     entrypoint: /bin/bash
     tty: true
     user: root

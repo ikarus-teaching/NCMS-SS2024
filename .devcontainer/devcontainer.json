@@ -50,5 +50,5 @@
 		}
 	},
 	"postStartCommand": "apt update",
-	"postCreateCommand": "pip install -r requirements.txt --verbose --upgrade --no-build-isolation && pip install --pre pyikarus --verbose --upgrade --no-build-isolation"
+	"postCreateCommand": "pip install -r requirements.txt --verbose --upgrade --no-build-isolation"
 }
