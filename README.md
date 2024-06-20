@@ -1,40 +1,35 @@
-# (Trimmed) IGA showcase using Ikarus' python bindings
+# Non-linear Computational Mechanics of Structures
 
 <!--
 SPDX-FileCopyrightText: 2024 The Ikarus Developers mueller@ibb.uni-stuttgart.de
 SPDX-License-Identifier: LGPL-3.0-or-later
 -->
 
-This workspace provides an example for IGA analysis using [Ikarus](https://ikarus-project.github.io/dev/) with Python.
+This repository aims to provide additional material for the course *Non-linear Computational Mechanics of Structures* offered by the *Institute for Structural Mechanics* of the University of Stuttgart.
+Different problems to be solved during the exercise sessions reside in the `Exercise` folder.
+Their corresponding solution is available in the `Solution` folder.
 
-You can use the workspace with the provided devcontainer. Everything should be set up automatically for you.
-The only dependency is Docker with WSL2 integration. It is also possible to run in a Github codespace.
+## Instructions for Use
 
-### Usage
-
-Run `main.py` in the `src` folder. Change parameters in the main function as you like. (Warning, refinement bigger than 6 can lead to  rather long computation times).
-
-If you have a windowing server (like X) available you can also run the `plot` function to display the displacement contour plot.  
+To be updated !!!
 
 ### Troubleshooting
 
-If Ikarus doesn't install / compile itself automatically you can run:
+If Ikarus doesn't install or compile itself automatically, run:
 
 ```bash
 pip install --pre pyikarus --verbose --upgrade --no-build-isolation
 ```
 
-If Python isn't able to find Ikarus, make sure to be in the correct python venv.
+If Python isn't able to find Ikarus, make sure to be in the correct Python venv.
 Run  `pip -V`. This should return something similar to
 
 ```bash
 pip 23.3.1 from /dune/dune-common/build-cmake/dune-env/lib/python3.11/site-packages/pip (python 3.11)
 ```
 
-If this is not the case enable the venv via
+If this is not the case, enable the venv via
 
 ```bash
 source /dune/dune-common/build-cmake/dune-env/bin/activate
 ```
-
-LICENSE: If not otherwise stated: MIT
