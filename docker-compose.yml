@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2024 The Ikarus Developers mueller@ibb.uni-stuttgart.de
+# SPDX-License-Identifier: MIT
+
+version: "3.3"
+services:
+  OpenIkarusContainer:
+    image: ikarusproject/ikarus:latest
+    entrypoint: /bin/bash
+    tty: true
+    user: root
+    volumes:
+      - .:/workspaces/ikarus
+    working_dir: /workspaces/ikarus

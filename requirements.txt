@@ -1,0 +1,8 @@
+scikit-build
+pyvista
+pandas
+tabulate
+geomdl
+gmsh
+ipykernel
+trame

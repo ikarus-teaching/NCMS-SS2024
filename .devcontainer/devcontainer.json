@@ -1,0 +1,56 @@
+// SPDX-FileCopyrightText: 2024 The Ikarus Developers mueller@ibb.uni-stuttgart.de
+// SPDX-License-Identifier: MIT
+
+{
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"workspaceFolder": "/workspaces/ikarus",
+	"service": "OpenIkarusContainer",
+	"shutdownAction": "stopCompose",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"ms-vscode.cpptools-extension-pack",
+				"llvm-vs-code-extensions.vscode-clangd",
+				"ms-python.python",
+				"benjamin-simmonds.pythoncpp-debug",
+				"eamodio.gitlens",
+				"ms-toolsai.jupyter",
+				"ms-azuretools.vscode-docker",
+				"charliermarsh.ruff",
+				"xaver.clang-format",
+				"mathematic.vscode-pdf"
+			],
+			"settings": {
+				"C_Cpp.intelliSenseEngine": "disabled",
+				"cmake.configureArgs": [
+					"-DADD_FORMATTARGET=1"
+				],
+				"python.pythonPath": "/dune/dune-common/build-cmake/dune-env/bin/python",
+				"python.defaultInterpreterPath": "/dune/dune-common/build-cmake/dune-env/bin/python",
+				"clangd.arguments": [
+					"--compile-commands-dir=${workspaceFolder}/build",
+					"--completion-style=detailed",
+					"--header-insertion=never",
+					"-pretty"
+				],
+				"clangd.path": "/usr/bin/clangd-17",
+				"cmake.automaticReconfigure": false,
+				"cmake.configureOnEdit": false,
+				"clang-format.executable": "/usr/bin/clang-format-17",
+				"[cpp]": {
+					"editor.defaultFormatter": "xaver.clang-format"
+				},
+				"[python]": {
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"editor.formatOnSave": true
+				}
+			}
+		}
+	},
+	"postStartCommand": "apt update && pip install --upgrade pip",
+	"postCreateCommand": "pip install -r requirements.txt --verbose --upgrade --no-build-isolation && pip install --pre pyikarus --verbose --upgrade --no-build-isolation"
+}

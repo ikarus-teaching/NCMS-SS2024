@@ -1,0 +1,4 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: IkarusTeaching
+Upstream-Contact: The Ikarus Developers <mueller@ibb.uni-stuttgart.de>
+Source: https://github.com/ikarus-teaching/NCMS-SS2024
