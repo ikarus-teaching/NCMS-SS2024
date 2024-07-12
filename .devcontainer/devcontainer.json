@@ -22,7 +22,8 @@
 				"ms-azuretools.vscode-docker",
 				"charliermarsh.ruff",
 				"xaver.clang-format",
-				"mathematic.vscode-pdf"
+				"mathematic.vscode-pdf",
+				"github.codespaces"
 			],
 			"settings": {
 				"C_Cpp.intelliSenseEngine": "disabled",
